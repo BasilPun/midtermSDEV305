@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    width:70%;
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 5px;
+}
+
+#book-form{
+    display: grid;
+    grid-template-areas: 
+    "top-bar"
+    "lower-half";
+    gap: 1rem;
+}
+
+#top-bar{
+    grid-area: top-bar;
+}
+
+#lower-half{
+    grid-area: lower-half;
+    display: grid;
+    grid-template-areas:
+    "dest-box dest-box"
+    "dep-date-box travelers-box"
+    "submit submit";
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+#dest-box{
+    grid-area: dest-box;
+}
+
+#travelers-box{
+    grid-area: travelers-box;
+}
+
+#dep-date-box{
+    grid-area: dep-date-box;
+}
+
+#submit{
+    grid-area: submit;
+}
+
+#top-bar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;   
+    padding: 3rem 3rem;
+    background-image: url(../images/bannerbg.jpeg);
+}
+
+#dest-box, #dep-date-box, #travelers-box{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#submit{
+    background-color: green;
+    border-color: green;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.err{
+    color: red;
+    display: none;
+}
+

@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel = "stylesheet" href = "../styles/home-style.css">
+    <script src = "../scripts/home-script.js" defer></script>
+    <link rel="icon" href="../images/wave.png">
+    <title>Dream Booker</title>
 </head>
 <body>
-    Landing page
+    <main>
+        <form id = "book-form" action = "/thank-you" method="post">
+            <div id = "top-bar">
+                <h1>Book your dream vacation</h1>
+            </div>
+            <div id = "lower-half">
+                <div id = "dest-box">
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination">
+                        <option value="none">Choose a destination</option>
+                        <option value="bali">Bali, Indonesia</option>
+                        <option value="paris">Paris, France</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="nyc">New York City, USA</option>
+                        <option value="sg">Singapore</option>
+                    </select>
+                    <span class = "err" id = "err-dest">Destination is required</span>
+                </div>
+                <div id = "dep-date-box">
+                    <label for = "date">Departure Date</label>
+                    <input type = "date" id = "date" name = "date">
+                    <span class = "err" id = "err-dep">Departure Date is required</span>
+                </div>
+                <div id = "travelers-box">
+                    <label for = "travelers">Number of travelers</label>
+                    <input type = "number" id = "travelers" name = "travelers">
+                    <span class = "err" id = "err-travelers">Provide a valid number</span>
+                </div>
+
+                <button type = "submit" id = "submit">Find My Vacation</button>
+            </div>
+        </form>
+    </main>
 </body>
 </html>
